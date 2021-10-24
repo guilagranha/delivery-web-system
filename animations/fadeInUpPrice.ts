@@ -2,14 +2,14 @@ const easing = [0.6, -0.05, 0.01, 0.99]
 
 export default {
   initial: {
-    opacity: 0,
-    x: -72
+    opacity: 1,
+    y: 70
   },
   animate: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
-      duration: .5,
+      duration: 1.7,
       ease: easing
     }
   }

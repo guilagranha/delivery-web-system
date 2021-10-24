@@ -7,6 +7,7 @@ import stagger from '../../animations/stagger'
 import Menu from "../../components/Menu";
 import FloatingCart from "../../components/Cart/FloatingCart";
 import { useState } from "react";
+import Sidebar from "../../components/Cart/Sidebar";
 
 /* 
   === 3 Important Props ===
@@ -22,6 +23,7 @@ import { useState } from "react";
 
 export default function Index({ products }) {
   const [tab, setTab] = useState('Promoções')
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     /* Fadein effect */
@@ -40,31 +42,43 @@ export default function Index({ products }) {
           <div className="w-full text-center py-16">
             <div className="text-2xl font-bold">{tab}</div>
           </div>
-          <motion.div variants={stagger(0.3)} className="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 mx-6">
-            {products.map(product => (
-              <Link
-                key={product.id}
-                href='/products/[id]'
-                as={`/products/${product.id}`}
-              >
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 1 }}
-                  className="row-span-1 w-full bg-white hover:bg-gray-100 shadow-lg rounded-2xl cursor-pointer"
-                >
-                  <motion.img initial={{ x: 60, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2 }} key={product.image} src={product.image} width={250} />
-                  <div className="text-center py-4">
-                    <div className="text-lg font-bold">{product.name}</div>
-                    <div className="mt-2 text-md">{product.price}</div>
-                  </div>
-                </motion.div>
-              </Link>
-            ))}
-          </motion.div>
+          {
+            tab === 'Promoções' && (
+              <motion.div variants={stagger(0.3)} className="grid grid-cols-2 lg:grid-cols-3 gap-4 py-6 mx-6">
+                {products.map(product => (
+                  <Link
+                    key={product.id}
+                    href='/products/[id]'
+                    as={`/products/${product.id}`}
+                  >
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 1 }}
+                      className="row-span-1 w-full bg-white hover:bg-gray-100 shadow-lg rounded-2xl cursor-pointer"
+                    >
+                      <motion.img initial={{ x: 60, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2 }} key={product.image} src={product.image} width={250} />
+                      <div className="text-center py-4">
+                        <div className="text-lg font-bold">{product.name}</div>
+                        <div className="mt-2 text-md">{product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+                      </div>
+                    </motion.div>
+                  </Link>
+                ))}
+              </motion.div>
+            )
+          }
         </div>
       </div>
-      <FloatingCart />
+      <FloatingCart
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+      />
+      <Sidebar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        products={products}
+      />
     </motion.div>
   )
 };

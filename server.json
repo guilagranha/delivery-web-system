@@ -4,64 +4,65 @@
             "id": "big-mac",
             "name": "Big Mac",
             "details": "Não existe nada igual! Dois hambúrgueres, alface, queijo e molho especial, cebola e picles num pão com gergelim. O sabor de McDonald’s duplamente delicioso. Com dois hambúrgueres de carne 100% bovina, queijo cheddar derretido, cebola, picles e o incrível molho Big Mac.",
-            "price": "R$12,99",
+            "price": 12.99,
             "image": "https://i.imgur.com/6ufOYGp.png"
         },
         {
             "id": "cheddar-mcmelt",
             "name": "Cheddar Mcmelt",
             "details": "Sem palavras para descrever. Feito com carne bovina, delicioso queijo tipo cheddar derretido, cebola grelhada ao molho shoyu e para completar um pão escuro com gergelim.",
-            "price": "R$14,99",
+            "price": 14.99,
             "image": "https://i.imgur.com/w6jVleU.png"
         },
         {
             "id": "duplo-cheddar-mcmelt",
             "name": "Duplo Cheddar Mcmelt",
             "details": "Duplamente delicioso. Dois hambúrgueres, delicioso queijo tipo cheddar derretido, cebola ao molho shoyu e para completar um pão escuro com gergelim.",
-            "price": "R$17,99",
+            "price": 17.99,
             "image": "https://i.imgur.com/hHLfvTw.png"
         },
         {
             "id": "water",
             "name": "Água Mineral",
             "details": "Água sem gás.",
-            "price": "R$12,90",
+            "price": 1.90,
             "image": "https://i.imgur.com/HTpKgKx.png"
         },
         {
             "id": "soft-drink-400ml",
             "name": "Refrigerante 400ml",
             "details": "Refrescante e geladinho. Uma bebida assim refresca a vida. Você pode escolher entre Coca-Cola, Coca-Cola Zero, Fanta Guaraná e Fanta Laranja.",
-            "price": "R$6,90",
+            "price": 6.90,
             "image": "https://i.imgur.com/EVCtn2c.png"
         },
         {
             "id": "soft-drink-700ml",
             "name": "Refrigerante 700ml",
             "details": "Refrescante e geladinho. Uma bebida assim refresca a vida. Você pode escolher entre Coca-Cola, Coca-Cola Zero, Fanta Guaraná e Fanta Laranja.",
-            "price": "R$8,90",
+            "price": 8.90,
             "image": "https://i.imgur.com/UslDXCu.png"
         },
         {
             "id": "sundae",
             "name": "Sundae",
             "details": "A medida certa entre calda de chocolate e massa gelada de baunilha que pode fazer você viver uma experiência explosiva, além de amedoins crocantes. Desfrute dessa combinação perfeita!",
-            "price": "R$6,90",
+            "price": 6.90,
             "image": "https://i.imgur.com/8cpCcPd.png"
         },
         {
             "id": "top-sundae",
             "name": "Top Sundae",
             "details": "Massa gelada de baunilha com uma supercamada de cobertura de chocolate e ainda por cima com farofa de paçoca. O canudo completa a tentação.",
-            "price": "R$9,90",
+            "price": 9.90,
             "image": "https://i.imgur.com/r9DP7KN.png"
         },
         {
             "id": "mcshake",
             "name": "McShake",
             "details": "Deliciosamente cremoso. O novo McShake Chocolate Kopenhagen é feito com leite e batido na hora. Uma delícia!",
-            "price": "R$12,90",
+            "price": 12.90,
             "image": "https://i.imgur.com/xnwdjtg.png"
         }
-    ]
+    ],
+    "cart": []
 }
